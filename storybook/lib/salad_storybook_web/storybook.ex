@@ -7,5 +7,6 @@ defmodule SaladStorybookWeb.Storybook do
     css_path: "/assets/storybook.css",
     js_path: "/assets/storybook.js",
     sandbox_class: "salad-storybook-web",
-    title: "Salad UI"
+    title: "Salad UI",
+    color_mode: true
 end
