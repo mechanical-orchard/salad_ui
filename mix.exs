@@ -67,16 +67,16 @@ defmodule SaladUI.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tw_merge, "~> 0.1"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.34", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.18", only: [:dev, :test], runtime: false},
+      {:igniter, "~> 0.6"},
+      {:mix_test_watch, "~> 1.3", only: [:dev, :test]},
       {:phoenix_live_view, "~> 1.0"},
-      {:mix_test_watch, "~> 1.2", only: [:dev, :test]},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
-      {:styler, "~> 0.7", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.24", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.10", only: [:dev, :test], runtime: false},
-      {:tailwind, "~> 0.2", only: [:dev, :test], runtime: Mix.env() == :dev},
-      {:igniter, "~> 0.5"},
-      {:sourceror, "~> 1.9"}
+      {:sourceror, "~> 1.10"},
+      {:styler, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:tailwind, "~> 0.3", only: [:dev, :test], runtime: Mix.env() == :dev},
+      {:tw_merge, "~> 0.1"}
     ]
   end
 
