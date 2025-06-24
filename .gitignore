@@ -33,3 +33,6 @@ node_modules/
 /.ctags.d/
 .tags
 /.direnv/
+/.idea/
+/storybook/.idea/
+*.iml
