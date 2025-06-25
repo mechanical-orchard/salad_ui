@@ -11,20 +11,14 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        # NOTE:
-        # override since `elixir` is defaulting to 1.18 atm, and lexical doesn't support that version yet
-        lexical =
-          pkgs.lexical.override { elixir = pkgs.beam27Packages.elixir_1_17; };
       in {
         devShells.default = pkgs.mkShell {
-          packages = [ lexical ];
-
           buildInputs = with pkgs; [
-            beam27Packages.elixir_1_17
+            beam27Packages.elixir
             beam27Packages.erlang
 
             # LSPs
-            # lexical
+            lexical
             erlang-ls
           ];
         };

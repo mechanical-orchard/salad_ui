@@ -60,20 +60,21 @@ defmodule SaladStorybook.MixProject do
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
-      {:telemetry_metrics, "~> 0.6"},
+      {:nimble_options, "~> 1.1"},
+      {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
-      {:dns_cluster, "~> 0.1.1"},
+      {:dns_cluster, "~> 0.2"},
       {:plug_cowboy, "~> 2.5"},
       {:phoenix_storybook, "~> 0.8"},
-      {:styler, "~> 0.7", only: [:dev, :test], runtime: false},
+      {:styler, "~> 1.0", only: [:dev, :test], runtime: false},
       {:floki, "~> 0.36"},
       {:faker, "~> 0.18"},
       {:live_debugger, "~> 0.2.4"},
 
       # salad ui
-      {:lucide_icons, "~> 1.1"},
+      {:lucide_icons, "1.1.1"},
 
       # load local salad_ui on dev from local path
       (Mix.env() == :prod &&
